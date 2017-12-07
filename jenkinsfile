@@ -5,16 +5,19 @@ pipeline {
      stage('Build') {
        steps {
          echo 'qqweqw'
+	 sh 'qwerty'
 	}
       }
       stage('Test'){
         steps {
 	  echo 'qweqwew'
+	  sh 'qwert'
 	}
       }
       stage('Deploy') {
         steps {
 	  echo 'eqweqweqwe'
+	  sh 'qwer'
 	 }
        }
      }
