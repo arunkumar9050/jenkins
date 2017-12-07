@@ -1,25 +1,23 @@
 pipeline {
     agent any
-
-  stages {
-     stage('Build') {
-       steps {
-         echo 'qqweqw'
-	
-	}
-      }
-      stage('Test'){
-        steps {
-	  echo 'qweqwew'
-	 
-	}
-      }
-      stage('Deploy') {
-        steps {
-	  echo 'eqweqweqwe'
-	
-	 }
-       }
-     }
-   }
-
+    stages {
+        stage('Build') {
+            steps {
+                sh 'ls -l'
+                dir ('foo') {
+                 writeFile file:'dummy', text:''
+                 }
+                }
+               }
+                stage('Test') {
+                 steps {
+                  sh 'ls -l'
+                  }
+                 }
+                 stage('Deploy') {
+                  steps {
+                       echo 'Hello World'
+                       }
+                      }
+                     }
+                    }
